@@ -1,0 +1,687 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+button {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./../image/pexels-frans-van-heerden-1022692.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #020202;
+  padding: 10px 150px;
+  height: 65px;
+}
+.nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 30%;
+}
+.logo img {
+  width: 60px;
+  height: 40px;
+}
+.nav .list {
+  width: 70%;
+}
+.nav .list ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%;
+}
+.nav .list ul a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.nav .list ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.nav .list ul li::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: -100%;
+  transition: 0.5s;
+  /* left: 0; */
+}
+.nav .list ul li:nth-child(1)::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+
+.nav .list ul li:hover::after {
+  left: 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 65px);
+}
+main .text {
+  height: 60vh;
+  width: 100%;
+  text-align: center;
+}
+main .text .text-content {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+}
+main .text .text-content h1 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 600;
+}
+main .text .text-content h3 {
+  font-size: 30px;
+  margin-top: 50px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.text-button {
+  margin-top: 50px;
+}
+.text-button button {
+  min-width: 150px;
+  padding: 15px 0;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  font-size: 19px;
+  transition: 0.2s;
+}
+.text-button button:nth-child(2) {
+  background-color: blue;
+  color: #fff;
+}
+.text-button button:hover {
+  opacity: 0.88;
+}
+
+/* start first section */
+.first-title h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+  position: relative;
+}
+.first-title h1::after {
+  content: "";
+  width: 70px;
+  height: 5px;
+  background-color: #6195ff;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.first-content .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.first-content .row .first-box {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #0000007e;
+  height: 260px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.first-content .row .first-box::after {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: #333;
+  top: 0;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+.first-content .row .first-box:hover::after {
+  height: 100%;
+  width: 100%;
+}
+.first-content .row .first-box:hover .first-desc h1,
+.first-content .row .first-box:hover .first-desc p,
+.first-content .row .first-box:hover .first-desc a {
+  color: #6195ff;
+}
+.first-content .row .first-box .icon {
+  font-size: 25px;
+  color: #6195ff;
+  margin-block: 22px;
+  z-index: 3;
+}
+.first-content .row .first-box .first-desc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.first-content .row .first-box .first-desc h1 {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  margin-block: 20px;
+  text-transform: capitalize;
+  transition: 0.6s;
+  z-index: 3;
+}
+.first-content .row .first-box .first-desc p {
+  transition: 0.6s;
+  z-index: 3;
+}
+.first-content .row .first-box .first-desc a {
+  transition: 0.6s;
+  z-index: 3;
+  color: #242424;
+}
+/* End First section */
+
+/* Start Featured Works */
+.featured-works {
+  width: 100%;
+  height: auto;
+  background: #e8e8e8;
+  padding-bottom: 50px;
+}
+.featured-row {
+  width: 840px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  gap: 20px;
+}
+.featured-row .card {
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.featured-row .card img {
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.featured-row .card .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: absolute;
+  transition: 0.5s;
+  top: 100%;
+}
+.featured-row .card:hover .overlay {
+  top: 0;
+}
+.featured-row .card .overlay h1,
+h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 15px;
+  color: #6195ff;
+}
+.featured-row .card .overlay h2 {
+  color: #242424;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+.featured-row .card .overlay .overlay-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.featured-row .card .overlay .overlay-icon a {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  line-height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.featured-row .card .overlay .overlay-icon a i {
+  color: #6195ff;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.featured-row .card .overlay .overlay-icon a::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.featured-row .card .overlay .overlay-icon a:hover::after {
+  top: 0;
+}
+.featured-row .card .overlay .overlay-icon a:hover i {
+  z-index: 100;
+  font-size: 26px;
+  color: #fff;
+}
+/* End Featured Works */
+/* start offer section */
+.offer {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding-block: 50px;
+}
+.offer-row {
+  width: 950px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.offer-row .card {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  border: 1px solid #666;
+  padding-block: 20px;
+  padding-left: 10px;
+  transition: all 1s ease-in-out;
+}
+.offer-row .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 1s;
+  width: 0;
+  height: 0;
+}
+.offer-row .card:hover::after {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.offer-row .card .right {
+  flex: 4;
+  z-index: 2;
+}
+.offer-row .card .right h1 {
+  font-size: 20px;
+  color: #000;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.offer-row .card:hover .right h1,
+.offer-row .card:hover .right p {
+  color: #fff;
+  transition: 0.6s;
+}
+.offer-row .card .right p {
+  line-height: 1.8;
+}
+.offer-row .card .left {
+  flex: 1;
+  z-index: 2;
+}
+.offer-row .card .left a i {
+  font-size: 25px;
+  color: #6195ff;
+  margin-top: 16px;
+}
+/* End offer section */
+/* Start footer section */
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #4c4d52;
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .image {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+footer .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+footer .footer-social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+footer .footer-social-media a {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #6195ff;
+  background-color: #6195ff;
+  line-height: 45px;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 20px;
+}
+footer .footer-social-media a:hover {
+  background-color: teal;
+  border: 1px solid teal;
+}
+footer .copyright {
+  font-size: 12px;
+  color: #999;
+}
+/* End footer section */
+/* start choose section  */
+.choose-us {
+  width: 100%;
+  padding-block: 50px;
+}
+.choose-us .us-row {
+  display: flex;
+  gap: 10px;
+  width: 1100px;
+  margin: auto;
+}
+.choose-us .us-row .info {
+  flex: 1;
+}
+.choose-us .us-row .info h1 {
+  font-size: 28px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  position: relative;
+  color: #000;
+}
+.choose-us .us-row .info h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 5px;
+  background-color: royalblue;
+}
+.choose-us .us-row .info p {
+  color: #999;
+  font-size: 15px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  padding: 5px;
+}
+.choose-us .us-row .info .item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+.choose-us .us-row .info .item .circle {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #999;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.choose-us .us-row .info .item .circle i {
+  font-size: 15px;
+  color: royalblue;
+}
+.choose-us .us-row .image {
+  flex: 1;
+  height: 50vh;
+  padding-block: 20px;
+}
+
+.choose-us .us-row .image .main-img {
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+.choose-us .us-row .image .main-img .ball {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: -20px;
+}
+.choose-us .us-row .image .main-img .ball span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid royalblue;
+  transition: 0.3s;
+}
+.choose-us .us-row .image .main-img .ball span:hover {
+  background-color: royalblue;
+}
+.choose-us .us-row .image .main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+/* End choose section  */
+/* start banner section  */
+.banner {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  background-image: url("../image/pexels-frans-van-heerden-1022692.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.banner .banner-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 100px;
+  z-index: 2;
+}
+.banner .banner-row .banner-item {
+  text-align: center;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.banner .banner-row .banner-item i {
+  color: royalblue;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.banner .banner-row .banner-item h1 {
+  color: #fff;
+  font-size: 32px;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+.banner .banner-row .banner-item p {
+  color: #fff;
+  font-size: 18px;
+  width: fit-content;
+  text-transform: capitalize;
+}
+/* End banner section  */
+/* start pricing section  */
+.Pricing {
+  width: 100%;
+  padding-block: 50px;
+}
+.Pricing .pricing-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 960px;
+  margin: auto;
+  gap: 20px;
+  margin-top: 50px;
+}
+.Pricing .pricing-row .pricing-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.Pricing .pricing-row .pricing-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+}
+.Pricing .pricing-row .pricing-card:hover:after {
+  top: 0;
+  z-index: 0;
+}
+.Pricing .pricing-row .pricing-card:hover #first-heading,
+.Pricing .pricing-row .pricing-card:hover .amount-circle {
+  color: red;
+  transition-duration: 0.4s;
+  z-index: 1;
+}
+.Pricing .pricing-row .pricing-card:hover .amount-circle {
+  border: 1px solid red;
+}
+
+.Pricing .pricing-row .pricing-card .amount-circle {
+  width: 90px;
+  height: 90px;
+  border: 1px solid royalblue;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.Pricing .pricing-row .pricing-card .amount-circle span {
+  font-size: 25px;
+}
+.Pricing .pricing-row .pricing-card .amount-circle p {
+  font-size: 22px;
+}
+.Pricing .pricing-row .pricing-card h1 {
+  margin-block: 10px;
+}
+.Pricing .pricing-row .pricing-card button {
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 1px solid royalblue;
+  margin: 20px auto;
+  border-radius: 3px;
+  font-size: 18px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+/* End pricing section  */
